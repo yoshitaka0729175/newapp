@@ -1,0 +1,30 @@
+.wrapper
+  .header
+    .header__left
+      Homework App
+    .header__right
+      .header__right__group
+        .header__right__group__logo
+          = link_to "higuchi", destroy_user_session_path, method: :delete 
+        .header__right__group__logo
+          = link_to "ログアウト", new_user_session_path, class: "post"
+
+  .main
+    .main__group
+      .main__group__text
+        ここは仮置きで！
+      .main__group__name
+        higuchi
+        .main__group__date
+          2019/10/01 10:13
+
+  .form
+    = form_with url: root_path do |f|
+      .form__contents
+        = f.text_area :content, class: "text", placeholder: '文字を入力（25文字以内)'
+      .form__submit
+        = f.submit '投稿する', class: "btn"
+
+
+  .footer
+    Homework App 2019
